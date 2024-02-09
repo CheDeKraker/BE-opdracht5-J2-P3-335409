@@ -24,6 +24,8 @@ $this->component('PageEssentials/head', ['title' => $data['title']]);
                 <?php else : ?>
                     <td><?= $product->inStorage ?></td>
                 <?php endif; ?>
+                <td><a href="/product/Allergeen/<?= $product->id ?>"><span class="material-symbols-outlined">close</span></a></td>
+                <td><a href="/product/Leverancier/<?= $product->id ?>"><span class="material-symbols-outlined">question_mark</span></a></td>
 
             </tr>
         <?php endforeach; ?>
