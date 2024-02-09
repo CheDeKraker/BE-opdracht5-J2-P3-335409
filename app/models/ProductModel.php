@@ -16,4 +16,12 @@ class ProductModel
                          ORDER BY product.barcode ASC');
         return $this->db->execute(true);
     }
+
+    public function getProduct(int $productId)
+    {
+        $this->db->query('SELECT * FROM product
+                         WHERE product.id = :productId');
+        $this->db->bind(':productId', $productId);
+        return $this->db->execute(true)[0];
+    }
 }

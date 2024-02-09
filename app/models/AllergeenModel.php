@@ -19,15 +19,4 @@ class AllergeenModel
         $this->db->bind(':productId', $productId);
         return $this->db->execute(true);
     }
-
-    public function getProducts(int $productId)
-    {
-        $this->db->query('SELECT product.name, product.barcode
-                        FROM product
-                        LEFT JOIN productAllergy ON product.id = productAllergy.productId
-                        WHERE productAllergy.productId = :productId');
-        $this->db->bind(':productId', $productId);
-        return $this->db->execute(true);
-    }
-    
 }

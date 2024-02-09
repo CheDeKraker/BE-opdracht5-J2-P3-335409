@@ -38,7 +38,7 @@ class Product extends BaseController
         $data = [
             'title' => 'Overzicht allergenen',
             'allergeens' => $this->model('AllergeenModel')->getAllergies($productId),
-            'allergeenProduct' => $this->model('AllergeenModel')->getProducts($productId)
+            'allergeenProduct' => $this->model->getProduct($productId)
         ];
 
         $this->view('Allergeen/index', $data);
