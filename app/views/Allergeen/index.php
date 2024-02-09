@@ -4,8 +4,8 @@ $this->component('PageEssentials/head', ['title' => $data['title']]);
 
 <body>
     <h1><?= $data['title'] ?></h1>
-    <p>Naam product: <?= $data['allergeenProduct']->name ?></p>
-    <p>Barcode: <?= $data['allergeenProduct']->barcode ?></p>
+    <p>Naam product: <?= $data['allergeenProduct'][0]->name ?></p>
+    <p>Barcode: <?= $data['allergeenProduct'][0]->barcode ?></p>
 
     <table>
         <tr>
