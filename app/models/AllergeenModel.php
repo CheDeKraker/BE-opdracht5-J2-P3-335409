@@ -14,7 +14,8 @@ class AllergeenModel
         $this->db->query('SELECT allergy.name, allergy.description
                         FROM allergy
                         LEFT JOIN productAllergy ON allergy.id = productAllergy.allergyId
-                        WHERE productAllergy.productId = :productId');
+                        WHERE productAllergy.productId = :productId
+                        ORDER BY allergy.name ASC');
         $this->db->bind(':productId', $productId);
         return $this->db->execute(true);
     }
