@@ -13,7 +13,7 @@ class ProductModel
     {
         $this->db->query('SELECT * FROM product
                          LEFT JOIN storage ON product.id = storage.productId
-                         ORDER BY product.barcode DESC');
+                         ORDER BY product.barcode ASC');
         return $this->db->execute(true);
     }
 }

@@ -25,7 +25,7 @@ class LeverancierModel
                           FROM product
                           LEFT JOIN productSupplier ON product.id = productSupplier.productId
                           WHERE productSupplier.productId = :productId
-                          ORDER BY productSupplier.dateDelivery DESC');
+                          ORDER BY productSupplier.dateDelivery ASC');
         $this->db->bind(':productId', $productId);
         return $this->db->execute(true);
     }
