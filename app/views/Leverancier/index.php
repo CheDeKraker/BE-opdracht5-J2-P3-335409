@@ -30,6 +30,25 @@ $this->component('PageEssentials/head', ['title' => $data['title']]);
             </tr>
         <?php endforeach; ?>
     </table>
+
+    <style>
+        table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+    </style>
 </body>
 
 
