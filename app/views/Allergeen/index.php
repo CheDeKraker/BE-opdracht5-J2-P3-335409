@@ -21,9 +21,10 @@ $this->component('PageEssentials/head', ['title' => $data['title']]);
             <?php endforeach; ?>
          <?php else : ?>
             <tr>
-                <td>Null</td>
-                <td>Null</td>
+                <td>-</td>
+                <td>In dit product zitten geen stoffen die een allergische reactie kunnen veroorzaken</td>
             </tr>
+            <?php header("refresh:4;url=/Product/index.php") ?>
         <?php endif; ?>
     </table>
 
